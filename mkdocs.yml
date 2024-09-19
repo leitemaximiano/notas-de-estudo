@@ -1,0 +1,5 @@
+site_name: Caderno de anotações
+nav:
+  - Informações iniciais: index.md
+theme:
+  name: material
