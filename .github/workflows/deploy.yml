@@ -19,15 +19,13 @@ jobs:
           python-version: '3.x'
 
       - name: Install MkDocs
-        run: |
-          pip install mkdocs
-          pip install mkdocs-material 
+        run: pip install mkdocs mkdocs-material 
 
       - name: Build the site
-        run: mkdocs build --clean
+        run: mkdocs build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site 
+          github_token: ${{ secrets.GITHUB_TOKEN }}  
+          publish_dir: ./site  
